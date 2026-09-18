@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(pip --version)",
+      "Bash(pip3 --version)",
+      "Bash(curl -sI --max-time 5 https://pypi.org/simple/)",
+      "Bash(mkdir -p /tmp/sqlite_check)",
+      "Read(//tmp/**)",
+      "Bash(python3 -m venv venv)",
+      "Bash(./venv/bin/pip -q install \"sqlalchemy>=2.0\")",
+      "Bash(python3 -m pip --version)",
+      "Bash(apt list *)",
+      "Bash(python3 -c \"import ensurepip\")",
+      "Bash(apt-get install *)",
+      "Bash(curl -sS https://bootstrap.pypa.io/get-pip.py -o get-pip.py)",
+      "Bash(python3 get-pip.py --user -q)",
+      "Bash(python3 get-pip.py --user --break-system-packages -q)",
+      "Bash(python3 -m pip install --user --break-system-packages -q virtualenv)",
+      "Bash(python3 -m virtualenv --version)",
+      "Bash(python3 *)",
+      "Bash(/workspace/.venv/bin/python *)",
+      "Bash(PHARMACY_DB=/tmp/seed_test.db ../.venv/bin/python -m app.seed)",
+      "Bash(PHARMACY_DB=/tmp/seed_test.db ../.venv/bin/python *)",
+      "Bash(../.venv/bin/python -m pytest tests/ -q)",
+      "Bash(../.venv/bin/python -m pytest tests/test_acceptance.py::test_concurrent_outbound_never_oversells -q)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(pgrep *)",
+      "Bash(pkill -f \"port=8800\")",
+      "Bash(pkill -f \"8800\")",
+      "Bash(PHARMACY_DB=/tmp/e2e/runpy.db PHARMACY_PORT=8899 timeout 8 ../.venv/bin/python run.py)",
+      "Bash(rm -f /tmp/e2e/runpy.db)",
+      "Bash(PHARMACY_DB=/tmp/e2e/runpy.db PHARMACY_PORT=8899 timeout 6 ../.venv/bin/python run.py)",
+      "Bash(pkill -f \"uvicorn\\\\|run.py\")",
+      "Bash(xxd)"
+    ]
+  }
+}
