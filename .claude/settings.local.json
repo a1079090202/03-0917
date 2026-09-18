@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(pip3 install *)",
+      "Bash(python3 -m app.seed --force)",
+      "Bash(python3 -m pip --version)",
+      "Read(//usr/lib/python3.11/**)",
+      "Bash(apt-get -s install python3-pip)",
+      "Bash(curl -sS -m 10 https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py)",
+      "Read(//tmp/**)",
+      "Bash(python3 *)",
+      "Bash(PYTHONPATH=/workspace/backend/.pydeps python3 -c \"import fastapi, sqlalchemy, uvicorn, pydantic; print\\('deps ok', sqlalchemy.__version__\\)\")",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -m 3 http://127.0.0.1:8124/api/health)",
+      "Bash(pkill -f \"uvicorn app.main\")",
+      "Bash(rm -rf /tmp/smoke)",
+      "Bash(mkdir /tmp/smoke)",
+      "Bash(awk '{print $2}')",
+      "Bash(xargs -r kill)"
+    ]
+  }
+}

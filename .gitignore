@@ -1,0 +1,13 @@
+# Python 运行环境与依赖（start.bat 在 Windows 上自动建 .venv）
+backend/.venv/
+backend/.pydeps/
+__pycache__/
+*.pyc
+
+# 前端依赖（仅开发时需要；交付包已带 frontend_dist 构建产物）
+frontend/node_modules/
+
+# 数据库与 WAL 临时文件（首次启动自动建库播种；重置演示数据.bat 可重建）
+data/*.db
+data/*.db-shm
+data/*.db-wal
